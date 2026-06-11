@@ -13,10 +13,11 @@ import path from "path";
 
 // dotenv.config({});
 
-const PORT = process.env.PORT || 3000;
-
 
 const app = express();
+
+const PORT = process.env.PORT || 3000;
+
 
 const _dirname = path.resolve();
 
@@ -46,7 +47,7 @@ app.use("/api/resume", resumeRoute);
 
 
 app.use(express.static(path.join(_dirname , "/frontend/dist")));
-app.get('*',(_, res) => {
+app.get(/.*/,(_, res) => {
   res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
 });
 
