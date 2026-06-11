@@ -13,6 +13,9 @@ import path from "path";
 
 // dotenv.config({});
 
+const PORT = process.env.PORT || 3000;
+
+
 const app = express();
 
 const _dirname = path.resolve();
@@ -29,7 +32,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 3000;
 
 // app.get("/", (req, res) => {
 //   res.send("PrepAI Backend Running 🚀");
