@@ -70,8 +70,8 @@ IntervueX is a premium full-stack mock interview platform designed to help stude
 ### Frontend
 - React.js (Vite)
 - Tailwind CSS
-- Shadcn/UI
-- Framer Motion
+- Axios
+- React Router DOM
 - Monaco Editor
 
 ### Backend
