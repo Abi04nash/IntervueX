@@ -7,6 +7,7 @@ import {
 
 const ResumeAnalyser = () => {
   const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
   const [analyzing, setAnalyzing] = useState(false);
   const [results, setResults] = useState(null);
@@ -29,6 +30,8 @@ const ResumeAnalyser = () => {
           setResults(data.resume.parsedData);
         }
       } catch (err) {
+      } finally{
+        setLoading(false);
       }
     };
     fetchExistingResume();
@@ -112,6 +115,16 @@ const ResumeAnalyser = () => {
     setResults(null);
     setError("");
   };
+
+
+   if (loading) {
+    return (
+      <div className="flex flex-col justify-center items-center h-[80vh] text-indigo-400 space-y-4">
+        <FaSpinner className="animate-spin text-4xl" />
+        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Loading Resume...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-5xl mx-auto py-8 px-0 sm:px-6 lg:px-8 text-slate-200">

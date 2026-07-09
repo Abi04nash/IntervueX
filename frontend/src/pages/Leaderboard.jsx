@@ -72,7 +72,7 @@ const Leaderboard = () => {
     return (
       <div className="flex flex-col justify-center items-center h-[80vh] text-indigo-400 space-y-4">
         <FaSpinner className="animate-spin text-4xl" />
-        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Crunching Global Ranks...</p>
+        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Loading Global Ranks...</p>
       </div>
     );
   }

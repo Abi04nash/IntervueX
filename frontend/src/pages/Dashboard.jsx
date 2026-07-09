@@ -13,8 +13,10 @@ import {
   ChevronRight,
   Activity,
   Target,
-  Star
+  Star,
 } from "lucide-react";
+
+import { FaSpinner } from "react-icons/fa";
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -115,9 +117,9 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="w-full min-h-[80vh] flex flex-col items-center justify-center text-indigo-400 space-y-4">
-        <Activity className="animate-spin" size={40} />
-        <p className="text-slate-400 text-sm tracking-widest uppercase font-medium">Loading Command Center...</p>
+      <div className="flex flex-col justify-center items-center h-[80vh] text-indigo-400 space-y-4">
+        <FaSpinner className="animate-spin text-4xl" />
+        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Loading DashBoard...</p>
       </div>
     );
   }
