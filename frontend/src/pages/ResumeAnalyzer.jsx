@@ -121,7 +121,7 @@ const ResumeAnalyser = () => {
     return (
       <div className="flex flex-col justify-center items-center h-[80vh] text-indigo-400 space-y-4">
         <FaSpinner className="animate-spin text-4xl" />
-        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Loading Resume...</p>
+        <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Loading AI analysis......</p>
       </div>
     );
   }
@@ -133,7 +133,7 @@ const ResumeAnalyser = () => {
           <FaMagic className="text-indigo-500" /> AI Resume Analyzer
         </h1>
         <p className="text-slate-400">
-          Upload your resume to get an instant ATS score. The AI will extract your skills and use them to personalize your upcoming mock interviews.
+          Upload your resume to get an instant ATS score. AI will review your resume, calculate your ATS score, and generate mock interview questions customized to your background.
         </p>
       </div>
 
