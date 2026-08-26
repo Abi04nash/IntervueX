@@ -143,7 +143,7 @@ VITE_GOOGLE_CLIENT_ID=your_google_oauth_client_id
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/IntervueX.git
+git clone https://github.com/Abi04nash/IntervueX.git
 cd IntervueX
 ```
 
