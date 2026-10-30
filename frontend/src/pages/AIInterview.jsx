@@ -148,7 +148,7 @@ const AIInterview = () => {
   }, [messages, isSending]);
 
   // Web Speech API
-  const speakText = (text) => {
+  function speakText(text) {
     if (!window.speechSynthesis) return;
     window.speechSynthesis.cancel(); 
     const cleanText = text.replace(/\[.*?\]/g, '').replace(/```[\s\S]*?```/g, 'Code block submitted.');
@@ -246,7 +246,7 @@ const AIInterview = () => {
     }
   };
 
-  const autoSubmitInterview = async () => {
+  async function autoSubmitInterview()  {
     setIsLoading(true);
     try {
       const token = localStorage.getItem("token");
